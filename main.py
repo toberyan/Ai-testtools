@@ -1,7 +1,10 @@
 import os
+import time
+
 from openai import OpenAI
 
 global_input_data = []
+global_output_data = []
 
 
 def print_hi(name):
@@ -59,6 +62,12 @@ def traverse_folder(folder_path):
             traverse_folder(full_path)
 
 
+# 调用模型对话结果函数
+def get_model_result(input_data):
+    response = chat_with_openai(input_data)
+    global_output_data.append(response)
+
+
 # 按装订区域中的绿色按钮以运行脚本。
 if __name__ == '__main__':
     # 指定要遍历的文件夹路径
@@ -67,20 +76,15 @@ if __name__ == '__main__':
     # 调用函数开始遍历
     traverse_folder(folder_path)
 
-    print_hi('PyCharm')
-    # # 示例对话
-    # user_input = "你好，聊天机器人！"
-    # while True:
-    #     if user_input.lower() == '退出':
-    #         break
-    #
-    #     # 向OpenAI发送用户输入，获取回复
-    #     response = chat_with_openai(user_input)
-    #     print(f"机器人: {response}")
-    #
-    #     # 用户输入下一轮对话
-    #     user_input = input("用户: ")
-    #
-    # print("聊天结束！")
+    timer = 0  # 计算一分钟内询问的次数
 
+    # 调用模型将训练数据问题输入，反馈输出结果
+    for single_data in global_input_data:
+        get_model_result(single_data)
+        print(global_output_data[-1])
+        time.sleep(1)
+        timer += 1
 
+        if timer == 4:
+            timer = 0
+            time.sleep(60)
