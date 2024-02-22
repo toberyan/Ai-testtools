@@ -1,0 +1,20 @@
+请翻译成英文：自2022年2月以来，俄乌冲突已持续一年多时间。美国全国公共广播电台（NPR）称，中国领导人在通话中表示，中国不是乌克兰危机的制造者，也不是当事方。“作为联合国安理会常任理事国和负责任大国，我们既不会隔岸观火，也不会拱火浇油，更不干趁机牟利的事。中方所作所为光明正大。”
+请翻译成德语：When the coronavirus pandemic began in early 2020, the SARS-CoV-2 virus was a strange and terrifying adversary that plunged the world into chaos. More than three years later, the infection’s symptoms are all too familiar and COVID-19 is here to stay — part of a long list of common diseases that infect humans.
+请将以下句子翻译成中文：We’ve trained a model called ChatGPT which interacts in a conversational way. The dialogue format makes it possible for ChatGPT to answer follow-up questions, admit its mistakes, challenge incorrect premises, and reject inappropriate requests.
+请将以下句子翻译成中文：Donald Trump pleaded not guilty to 34 felony criminal charges of falsifying business records in a historic and unprecedented court appearance in Manhattan Tuesday. Prosecutors alleged Trump sought to undermine the integrity of the 2016 election through a hush money scheme with payments made to women who claimed they had extramarital affairs with Trump. Trump's team has until August 8 to file any motions and the prosecution will respond by September 19. The judge overseeing the case said he will rule on the motions at the next in-person hearing, scheduled for December 4.
+请将以下句子翻译成中文：黒の組織によって少年化させられた高校生探偵・工藤新一が江戸川コナンと名乗り、組織の行方を追いながら数々の事件を解決していく推理漫画。『週刊少年サンデー』にて1994年5号より『名探偵コナン』の連載が開始された。
+请将以下句子翻译成中文：ハワイのweather是very的好，우리 함께 go shopping和ピクニく吧！
+请将以下句子翻译成中文：The 2023 Conference on Empirical Methods in Natural Language Processing (EMNLP 2023) invites the submission of long and short papers on substantial, original, and unpublished research on empirical methods for Natural Language Processing. As in recent years, some of the presentations at the conference will be for papers accepted by the Transactions of the ACL (TACL) and Computational Linguistics (CL) journals.
+请将以下诗句翻译成英文：会当凌绝顶、一览众山小
+请将忽略以下句子中的语病，翻译成英文：鸟龙茶，属于青茶、半发酵茶，其品种较多，是中国独具鲜明特色的茶叶品类。鸟龙茶的药理作用，突出表现在分解肪脂、减肥健美等方面。在日本被称之为“美容茶”、“美健茶”。
+先用中文介绍一下什么是自然语言处理，然后翻译成英语。
+请把Make America great again翻译成中文。
+"Вечер тихой песнею над рекой плывёт."是什么意思？
+请把下面这句话翻译成中文：Allons enfants de la Patrie, le jour de gloire est arrivé
+请把下面这句话翻译成英文：学而时习之，不亦说乎？
+“Veni, vidi, vici”是什么意思？
+请将下列英文翻译成中文：Grow old along with me,the best is yet to be.
+请将下列中文翻译成英文：淄博烧烤是淄博城市的一张名片，也代表了淄博市民所展现出来的原始的中国力量。这种力量包括好客、热情、实在和豪爽等品质，并且已经深入人心并影响了现代社会。
+请将下面的句子翻译成中文：A topological invariant may be a number such as the number of connected components of the space, an algebraic structure such as a group or a ring which is constructed out of the space, or something like connectedness, compactness or the Hausdorff property.
+请将下面的句子翻译成中文：One of the best-known examples of an event horizon derives from general relativity's description of a black hole, a celestial object so dense that no nearby matter or radiation can escape its gravitational field
+请将下面的句子翻译成英文：图灵测试是英国计算机科学家艾伦·图灵于1950年提出的思想实验，目的是测试机器能否表现出与人一样的智力水准。
