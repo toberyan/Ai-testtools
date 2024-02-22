@@ -1,0 +1,20 @@
+请用python实现快速排序的代码
+请你用python写一下Dijkstra算法的代码
+请你给出在PyTorch下定义一个带ReLU激活函数的全连接层的代码
+请写出计算两个数的最大公约数(GCD)的Python代码
+请你用python实现计算斐波那契数列的函数
+使用python写一个二分查找的代码
+已知全班所有同学的姓名存储于列表names中，所有同学的身高存储于列表heights中，它们的关系是一一对应的。请写一段Python代码，将所有同学的姓名按身高由低到高排序。
+输入一个字符串，找出其中出现的所有数字，并输出它们的位置。请用python实现
+已知有一个数组A，如何随机打乱其中的元素顺序？请用C语言实现
+输入一个正整数，输出其中每个数字出现的次数。请用python实现
+如何将PyTorch的FP32模型保存为半精度？
+如果运行程序出现segmentation fault，可能的原因是什么？如何避免？
+C语言下使用printf异常输出“烫烫烫烫烫”，其原因是？
+请你给出在linux下将两个文件合并，然后按行去重的bash命令
+如何使用git命令提交对README.md文件的修改，更新日志为“update hyperparams”
+请将字符串“helloworld”中的奇数位改为大写并输出修改后的字符串
+在Python中如何使用pandas库读取大量数据并进行数据清洗？
+运行python程序出现错误：TypeError: ‘list’ object cannot be interpreted as an integer，如何修正
+请列举python的基本数据类型及其作用
+在机器学习中，如果学习率设置过大会出现什么问题？如何避免？
