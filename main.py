@@ -1,10 +1,14 @@
 import os
+import sys
 import time
+from datetime import datetime
 
 from openai import OpenAI
 
 global_input_data = []
 global_output_data = []
+
+original_stdout = sys.stdout
 
 
 def print_hi(name):
@@ -68,13 +72,17 @@ def get_model_result(input_data):
     global_output_data.append(response)
 
 
-# 按装订区域中的绿色按钮以运行脚本。
-if __name__ == '__main__':
-    # 指定要遍历的文件夹路径
-    folder_path = "./examples"
+# 将获取的模型结果输出到结果文件中
+def generate_result_to_files():
+    folder_path = 'output'
+    if os.path.exists(folder_path) and os.path.isdir(folder_path):
+        print("output is exists!")
+    else:
+        os.makedirs('output')
 
-    # 调用函数开始遍历
-    traverse_folder(folder_path)
+    current_time = datetime.now().strftime("%Y%m%d_%H%M%S")
+    output_file_name = f"moonshot_v1_8k_{current_time}.txt"
+    output_file_path = f"output/{output_file_name}"
 
     timer = 0  # 计算一分钟内询问的次数
 
@@ -82,9 +90,33 @@ if __name__ == '__main__':
     for single_data in global_input_data:
         get_model_result(single_data)
         print(global_output_data[-1])
+
+        # 打开文件并将标准输出重定向到文件
+        with open(output_file_path, 'a') as file:
+            sys.stdout = file
+
+            # 输出内容到文件
+            print("\nPrompt:\n")
+            print(single_data)
+
+            print("\nSystem1:\n")
+            print(global_output_data[-1])
+
+            sys.stdout = original_stdout
+
         time.sleep(1)
         timer += 1
 
         if timer == 4:
             timer = 0
             time.sleep(60)
+
+
+# 按装订区域中的绿色按钮以运行脚本。
+if __name__ == '__main__':
+    # 指定要遍历的文件夹路径
+    folder_path = "./examples"
+
+    # 调用函数开始遍历
+    traverse_folder(folder_path)
+    generate_result_to_files()
