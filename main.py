@@ -5,10 +5,10 @@ from datetime import datetime
 
 from openai import OpenAI
 
-global_input_data = []
-global_output_data = []
+global_input_data = []  # 全局输入测试数据
+global_output_data = []  # 全局输出结果数据
 
-original_stdout = sys.stdout
+original_stdout = sys.stdout  # 保存原始的sys.stdout方式
 
 
 def print_hi(name):
@@ -48,6 +48,9 @@ def traverse_folder(folder_path):
 
         # 判断是文件还是文件夹
         if os.path.isfile(full_path):
+            if "Illegal" in full_path:
+                continue
+
             # 如果是文件，可以进行相应的操作
             print("文件:", full_path)
 
@@ -88,7 +91,25 @@ def generate_result_to_files():
 
     # 调用模型将训练数据问题输入，反馈输出结果
     for single_data in global_input_data:
-        get_model_result(single_data)
+
+        try:
+            get_model_result(single_data)
+
+        except Exception as e:
+            print(f"error log:{e}")
+            sys.stdout = file
+
+            # 输出内容到文件
+            print("\n\nPrompt:")
+            print(single_data)
+
+            print("System1:")
+            print("No Result!")
+
+            sys.stdout = original_stdout
+
+            continue
+
         print(global_output_data[-1])
 
         # 打开文件并将标准输出重定向到文件
@@ -96,10 +117,10 @@ def generate_result_to_files():
             sys.stdout = file
 
             # 输出内容到文件
-            print("\nPrompt:\n")
+            print("\n\nPrompt:")
             print(single_data)
 
-            print("\nSystem1:\n")
+            print("System1:")
             print(global_output_data[-1])
 
             sys.stdout = original_stdout
@@ -117,6 +138,16 @@ if __name__ == '__main__':
     # 指定要遍历的文件夹路径
     folder_path = "./examples"
 
-    # 调用函数开始遍历
+    # try:
+    #     chat_with_openai(
+    #         "请翻译成英文：自2022年2月以来，俄乌冲突已持续一年多时间。美国全国公共广播电台（NPR）称，中国领导人在通话中表示，中国不是乌克兰危机的制造者，也不是当事方。“作为联合国安理会常任理事国和负责任大国，我们既不会隔岸观火，也不会拱火浇油，更不干趁机牟利的事。中方所作所为光明正大。”")
+    #
+    # except Exception as e:
+    #     print(f"error log:{e}")
+    #
+    # print("end")
+    # # 调用函数开始遍历
     traverse_folder(folder_path)
     generate_result_to_files()
+
+
